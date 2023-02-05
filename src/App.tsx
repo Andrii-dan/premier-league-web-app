@@ -1,8 +1,14 @@
 import React from 'react';
-import './App.css';
+import { CssBaseline } from '@mui/material';
+import './App.scss';
 
 function App() {
-	return <div className='App'>Hello Football World!</div>;
+	return (
+		<>
+			<CssBaseline />
+			<div>Hello Football World!</div>
+		</>
+	);
 }
 
 export default App;
