@@ -1,27 +1,26 @@
 import { useState } from 'react';
-import { Button, CssBaseline, ThemeProvider } from '@mui/material';
-import dark from './themes/dark';
-import light from './themes/light';
+import { CssBaseline, ThemeProvider } from '@mui/material';
+import dark from './layout/themes/dark';
+import light from './layout/themes/light';
 
 import './App.scss';
+import NavBar from './layout/navBar/NavBar';
 
 function App() {
-	const [theme, setTheme] = useState(light);
+	const [themeMode, setThemeMode] = useState(dark);
 
-	const changeTheme = () => {
-		theme === light ? setTheme(dark) : setTheme(light);
+	const switchThemeMode = () => {
+		themeMode === light ? setThemeMode(dark) : setThemeMode(light);
 	};
 
 	return (
 		<>
-			<ThemeProvider theme={theme}>
+			<ThemeProvider theme={themeMode}>
 				<CssBaseline />
-				<div style={{ height: '100vh', width: '100%' }}>
-					Hello Football World!
-					<Button variant='contained' color='primary' onClick={changeTheme}>
-						Change Theme
-					</Button>
-				</div>
+				<NavBar
+					themeMode={themeMode === light ? 'light' : 'dark'}
+					switchThemeMode={switchThemeMode}
+				/>
 			</ThemeProvider>
 		</>
 	);
