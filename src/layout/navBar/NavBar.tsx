@@ -34,9 +34,11 @@ const NavBar = ({ themeMode, switchThemeMode }: Props) => {
 				<Box sx={{ justifyContent: 'flex-end' }}>
 					{tabletWidthAndUp ? (
 						<>
+							{/* login button will be modified when authentification function appear */}
 							<Button variant='text' color='secondary' sx={{ mr: '8px' }}>
 								Login
 							</Button>
+
 							<Button
 								variant='outlined'
 								color='secondary'
