@@ -5,6 +5,7 @@ import light from './layout/themes/light';
 
 import './App.scss';
 import NavBar from './layout/navBar/NavBar';
+import Footer from './layout/footer/Footer';
 
 function App() {
 	const [themeMode, setThemeMode] = useState(dark);
@@ -21,6 +22,7 @@ function App() {
 					themeMode={themeMode === light ? 'light' : 'dark'}
 					switchThemeMode={switchThemeMode}
 				/>
+				<Footer />
 			</ThemeProvider>
 		</>
 	);
