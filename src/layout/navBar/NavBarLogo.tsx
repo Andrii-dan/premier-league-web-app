@@ -1,7 +1,7 @@
 import Typography from '@mui/material/Typography';
 
 import logo from '../../assets/logo.svg';
-import styles from './styles.module.scss';
+import styles from './Styles.module.scss';
 
 const NavBarLogo = () => {
 	return (
